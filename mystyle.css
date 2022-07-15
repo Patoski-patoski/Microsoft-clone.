@@ -92,7 +92,7 @@ ul.right-menu i{
 }
 
 .showcase{
-    background: url(/images/slide1.png);
+    background: url(images/slide1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -163,7 +163,7 @@ margin-top: 9em;
 }
 
 section.ultimate{
-    background: url(/images/xbox.png);
+    background: url(images/xbox.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
@@ -180,7 +180,7 @@ section.ultimate{
 
 section.carbon{
     height: 350px;
-    background: url(/images/carbon.jpg);
+    background: url(images/carbon.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -367,7 +367,7 @@ grid-template-columns:1fr
 
 
 .showcase{
-    background: url(/projectpatrick/images/slide1.png);
+    background: url(images/slide1.png);
     background-position: center center;
     background-size: cover;
     height: 400px;
