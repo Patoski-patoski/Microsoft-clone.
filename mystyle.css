@@ -35,6 +35,8 @@ li{
 a{
     color: #262626;
     text-decoration: none;
+     cursor: pointer;
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
 }
 
 
@@ -71,6 +73,8 @@ a:hover{
     padding: 5px;
     border-radius: 30px;
     font-size: smaller;
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+
 }
 
     
@@ -103,9 +107,15 @@ ul.right-menu i{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: ease-in-out 1s;
     
 }
 
+.showcase:hover{
+    transition: ease-in-out .05s;
+    box-shadow: 0px 0px 20px 2px #262626;
+    
+}
 .mam{
     margin-top: 150px;
 }
@@ -129,12 +139,15 @@ ul.right-menu i{
 
 .key{
 margin-top: 9em;
+transition: ease-in-out .05s;
 }
+
 .key:hover{
-    background-color: rgb(117, 197, 117);
+    background-color: rgb(118, 118, 230);
     padding: 15px;
     font-size: smaller;
     margin-top: 3em;
+    transition: ease-in-out .05s;
 }
 
 
@@ -148,13 +161,25 @@ margin-top: 9em;
 
 .cards img{
     width: 100%;
+    transition: step-start .5s;
 
+}
+
+.cards img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out .05s;
 }
 
 .icards{
     font-weight: bold;
     color: #0067b8;
     text-transform: uppercase;
+    transition: ease-in 0.5s;
+}
+
+.icards:hover{
+    transition: ease-in 1s;
+    box-shadow: 1px, 2px, 5px 2px #262626;
 }
 
 .icards a, .icards i{
@@ -169,7 +194,17 @@ section.ultimate{
     height: 400px;
     text-align: left;
     margin-top: 30px;
+    transition: linear 2s;
 }
+
+section.ultimate:hover{
+    transition: ease 1s;
+    opacity: 0.8;
+    box-shadow: 0px 0px 20px 2px #262626;
+
+
+}
+
 
 .xbox{
     width: 50%;
@@ -185,9 +220,15 @@ section.carbon{
     background-size: cover;
     background-repeat: no-repeat;
     text-align: left;
-    columns: #fff;
     margin-top: 20px;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s;
     
+}
+
+section.carbon:hover{
+    opacity: 0.8;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 2s;
+    box-shadow: 0px 0px 20px 2px #262626;
 }
 
 .c{
@@ -216,15 +257,21 @@ section.media{
 
 }
 
-.media img{
+ .media img{
+    transition: ease-out 0.5s;
     margin-left: 20px;
-}
+    
+ }
 
+ .media img:hover{
+    margin-bottom: 1.5em;
+    transition: ease-out 1s;
+ }
 footer.first-footer{
     background-color:#f2f2f2;
     color: #262626;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    justify-content: space-evenly;
     padding: 10px;
     font-size: smaller;
 }
@@ -233,6 +280,9 @@ footer.first-footer{
     line-height: 2.8;
 
 }
+
+/*--- You are out of a media query---- */
+
 
 footer.second-footer{
     background-color: #fff999;
@@ -264,7 +314,15 @@ footer.second-footer{
 
 .final div{
     padding-left: 13px;
-}                       
+}   
+
+
+/*--- Out of a media query---- */
+
+
+
+
+/* -----This is the starting of media queries----- */
 
 
 @media(max-width:768px){
@@ -306,6 +364,9 @@ ul.main-menu li{
     
 }
 
+/*--- In a media query---- */
+
+
 ul.main-menu li:last-child{
     border-bottom: 0;
 }
@@ -325,12 +386,23 @@ section.ultimate{
 }
 
 .carbon .c {
-        width: initial;
+        width: inherit;
+        
 }
 
+.c p{
+    font-size: 1rem;
+
+}
+
+
+
+
 footer.first-footer{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 20px;
+
 }
 
 
@@ -341,6 +413,9 @@ footer.second-footer {
     flex-wrap: wrap;
 
 }
+
+/*--- In a media query---- */
+
 
 
 
@@ -365,13 +440,17 @@ grid-template-columns:1fr
 }
 
 
+/*--- In a media query---- */
 
 .showcase{
-    background: url(images/slide1.png);
+    
     background-position: center center;
     background-size: cover;
     height: 400px;
+    transition: step-start .5s;
     
+
+
 }
 
 footer.first-footer{
@@ -387,6 +466,9 @@ footer.second-footer {
     flex-wrap: wrap;
 
 }
+
+/*--- In a media query---- */
+
 
 .final{
     flex-wrap: wrap;
@@ -404,8 +486,11 @@ section.ultimate {
     background-position: center center;
 }
 
-
 }
+
+
+/*--- In a media query---- */
+
 
 
 @media(max-width:767px){
@@ -414,3 +499,6 @@ section.ultimate {
         
     }
 }
+
+
+/* ---This is the end of media queries--- */
